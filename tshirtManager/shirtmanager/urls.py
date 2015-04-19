@@ -1,8 +1,8 @@
 from django.conf.urls import patterns, url
 
-from shirtmanager import views
+from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'login/$', views.login, name='login'),
+    url(r'login/$', views.login_view, name='login'),
 ]

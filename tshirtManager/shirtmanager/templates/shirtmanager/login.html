@@ -1,1 +1,14 @@
-<p>Nuthin to see here... yet</p>
+{% if messages %}
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+<form method="post">
+	{% csrf_token %}
+
+	<input type='text' placeholder='Username or Email' name='username' required>
+	<input type='password' placeholder='Password' name='password' required>
+
+	<button>Login</button>
+</form>
