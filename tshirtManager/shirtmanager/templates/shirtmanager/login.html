@@ -1,3 +1,4 @@
+<h1>Login</h1>
 {% if messages %}
     {% for message in messages %}
     <p>{{ message }}</p>
@@ -12,3 +13,5 @@
 
 	<button>Login</button>
 </form>
+
+<p>(Or <a href="{% url 'shirtmanager:register' %}">register</a>)</p>
